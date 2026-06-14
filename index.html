@@ -2,12 +2,39 @@
 <html>
 <head>
   <title>naruto.jpg</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+
+      /* background gambar */
+      background-image: url("naruto.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 20px;
+      margin-top: 50px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Menampilkan Gambar</h1>
+  <div class="content">
+    <h1>Menampilkan Gambar</h1>
 
-  <img src="foto.jpg" alt="Foto saya" width="300">
+    <img src="foto.jpg" alt="Foto saya" width="300">
+  </div>
 
 </body>
 </html>
