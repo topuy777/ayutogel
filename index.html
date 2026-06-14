@@ -2,40 +2,167 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Naruto</title>
+  <title>Naruto Landing Page</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background-image: url("naruto.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       height: 100vh;
+      background: url("naruto.jpg") center/cover no-repeat;
+      overflow: hidden;
+      color: white;
     }
 
-    img {
-      width: 320px;
-      height: auto;
-      border-radius: 12px;
-
-      /* posisi di tengah */
+    /* overlay gelap biar teks jelas */
+    .overlay {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+    }
+
+    /* NAVBAR */
+    nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    nav h1 {
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: #ffcc00;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #ffcc00;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+      z-index: 2;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 50px;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ffcc00;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: orange;
+      transform: scale(1.05);
+    }
+
+    /* karakter image */
+    .hero img {
+      width: 350px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      nav {
+        padding: 15px 20px;
+      }
+
+      .hero-text h2 {
+        font-size: 35px;
+      }
+
+      .hero img {
+        width: 250px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <img src="image(11).png">
+  <div class="overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>NARUTO</h1>
+    <ul>
+      <li>Home</li>
+      <li>Story</li>
+      <li>Characters</li>
+      <li>Episodes</li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>UZUMAKI NARUTO</h2>
+      <p>
+        Seorang ninja dari Desa Konoha yang bercita-cita menjadi Hokage.
+        Perjuangannya penuh dengan kerja keras, persahabatan, dan kekuatan
+        tekad yang tidak pernah menyerah.
+      </p>
+
+      <a href="#" class="btn">Watch Now</a>
+    </div>
+
+    <img src="image(11).png" alt="Naruto">
+  </section>
 
 </body>
 </html>
