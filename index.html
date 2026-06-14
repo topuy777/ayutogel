@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Background Naruto</title>
+  <title>Naruto</title>
 
   <style>
     * {
@@ -12,41 +12,30 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-
       background-image: url("naruto.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       height: 100vh;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .content {
-      background: rgba(0, 0, 0, 0.55);
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    .content img {
+    img {
       width: 320px;
       height: auto;
       border-radius: 12px;
-      display: block;
+
+      /* posisi di tengah */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   </style>
 </head>
 
 <body>
 
-  <div class="content">
-    <!-- pakai gambar kamu (yang kamu upload) -->
-    <img src="image(11).png">
-  </div>
+  <img src="image(11).png">
 
 </body>
 </html>
